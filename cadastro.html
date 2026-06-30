@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cadastro | Cia da Saude</title>
+    <link rel="stylesheet" href="assets/site.css">
+</head>
+
+<body>
+    <header class="topbar">
+        <nav class="nav"><a class="brand" href="index.html"><span class="brand-mark">CS</span><span>Cia da
+                    Saude</span></a>
+            <div class="menu"><a href="blog.html">Blog</a><a href="orcamento.html">Orcamento</a><a
+                    href="login.html">Login</a></div>
+        </nav>
+    </header>
+    <main>
+        <div class="page-hero">
+            <section class="section"><span class="eyebrow">Cadastro profissional</span>
+                <h1>Criar sua conta</h1>
+                <p>Cadastro para profissionais prescritores e equipe autorizada.</p>
+            </section>
+        </div>
+        <section class="content wide">
+            <form class="quote-box" data-register-form>
+                <h3>Dados de Contato</h3>
+                <div class="form-grid">
+                    <div class="field"><label>Nome Completo<input name="nome" required></label></div>
+                    <div class="field"><label>Telefone<input name="telefone" required></label></div>
+                </div>
+                <h3>Endereco do Consultorio</h3>
+                <div class="form-grid">
+                    <div class="field full"><label>Endereco<input name="endereco" required></label></div>
+                    <div class="field"><label>Bairro<input name="bairro" required></label></div>
+                    <div class="field"><label>Cidade<input name="cidade" required></label></div>
+                    <div class="field"><label>Estado<input name="estado" required></label></div>
+                </div>
+                <h3>Dados Profissionais</h3>
+                <div class="form-grid">
+                    <div class="field"><label>CRM/CRN<input name="registro" required></label></div>
+                    <div class="field"><label>Especialidade<input name="especialidade" required></label></div>
+                </div>
+                <h3>Dados de Acesso</h3>
+                <div class="form-grid">
+                    <div class="field"><label>E-mail<input type="email" name="email" required></label></div>
+                    <div class="field"><label>Senha<input type="password" name="senha" required></label></div>
+                </div>
+                <div class="checkboxes"><label><input type="checkbox" name="privacidade" required>Li e concordo com a
+                        Politica de Privacidade</label><label><input type="checkbox" name="usoDados" required>Autorizo o
+                        uso dos dados para fins de regular atendimento</label></div><button class="btn"
+                    type="submit">Criar Sua Conta</button>
+            </form>
+        </section>
+    </main>
+    <footer class="editable-footer" data-footer></footer>
+    <script src="assets/app.js"></script>
+</body>
+
+</html>

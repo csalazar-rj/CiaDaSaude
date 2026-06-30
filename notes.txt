@@ -1,0 +1,17 @@
+Criei o site institucional em formato landing page para a Cia da Saúde, com páginas internas, formulários, blog, login/cadastro, páginas de produtos e estrutura inicial do banco.
+
+Arquivo principal para abrir no navegador:
+[outputs/index.html](/Users/cesa/Documents/Codex/2026-06-25/cri/outputs/index.html)
+
+Também incluí:
+Formulário de orçamento na home e em [orcamento.html](/Users/cesa/Documents/Codex/2026-06-25/cri/outputs/orcamento.html), enviando a mensagem para WhatsApp.
+Blog com publicação via login simulado/localStorage em [blog.html](/Users/cesa/Documents/Codex/2026-06-25/cri/outputs/blog.html).
+Cadastro profissional em [cadastro.html](/Users/cesa/Documents/Codex/2026-06-25/cri/outputs/cadastro.html).
+
+Páginas de produtos, manipulação, vet e submenu “Sobre”.
+
+Schema inicial do banco em [schema.sql](/Users/cesa/Documents/Codex/2026-06-25/cri/outputs/db/schema.sql).
+
+Observações rápidas: o número do WhatsApp está como placeholder em [app.js](/Users/cesa/Documents/Codex/2026-06-25/cri/outputs/assets/app.js), na constante WHATSAPP_NUMBER. Como o anexo do rodapé não ficou disponível para mim, preenchi o rodapé com os dados fornecidos no texto e deixei tudo editável no objeto FOOTER no mesmo arquivo.
+
+Verifiquei os links locais: 19 páginas HTML, tudo resolvendo corretamente.

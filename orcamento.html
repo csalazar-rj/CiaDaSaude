@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Orçamento | Cia da Saúde</title>
+    <link rel="stylesheet" href="./assets/css/site_responsive.css">
+</head>
+
+<body>
+    <header class="topbar">
+        <nav class="nav">
+            <a class="brand" href="index.html">
+                <span class="brand-mark">CS</span>
+                <span>Cia da Saúde</span>
+            </a>
+            
+            <div class="menu">
+                <a href="sobre/equipe.html">Sobre</a>
+                <a href="blog.html">Blog</a>
+                <a href="orcamento.html">Orçamento</a>
+                <a href="farmacia.html">A Farmácia</a>
+                <a href="login.html">Login</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="page-hero">
+            <section class="section">
+                <span class="eyebrow">Solicitação</span>
+                <h1>Orçamento por receita</h1>
+                <p>Envie seus dados e a descrição da fórmula. O atendimento continua pelo WhatsApp da farmácia.</p>
+            </section>
+        </div>
+
+        <section class="content">
+            <form class="quote-box" data-budget-form>
+                <div class="form-grid">
+                    <div class="field full">
+                        <label>Nome Completo:<input name="nome" required></label>
+                    </div>
+                    <div class="field">
+                        <label>E-mail:<input type="email" name="email" required></label>
+                    </div>
+                    <div class="field">
+                        <label>Telefone:<input name="telefone" required></label>
+                    </div>
+                    <div class="field full">
+                        <label>Você é prescritor?
+                            <select name="prescritor" required>
+                                <option>Não</option>
+                                <option>Sim</option>
+                            </select>
+                        </label>
+                    </div>
+                    
+                    <div class="field full">
+                        <label>Descrição<textarea name="descricao" required></textarea></label>
+                    </div>
+
+                    <div class="field full">
+                        <label>Anexar uma ou mais receitas
+                            <input type="file" name="receitas" multiple accept="image/*,.pdf">
+                        </label>
+                    </div>
+                </div>
+                <button class="btn" type="submit">Solicitar o Orçamento</button>
+            </form>
+        </section>
+
+    </main>
+    <footer class="editable-footer" data-footer></footer>
+    <script src="./assets/js/app_responsivo.js"></script>
+</body>
+
+</html>
