@@ -61,7 +61,7 @@ function renderFooter() {
         <p>Instagram: ${FOOTER.instagram}</p>
       </div>
     </div>
-    <div class="footer-note">Rodape editavel em assets/app.js. Atualize os dados do objeto FOOTER quando necessario.</div>
+    <div class="footer-note">© 2026 CiaDaSaúde. Ambiente de Testes para demonstração.         Created by: Carlos ESA</div>
   `;
 }
 
