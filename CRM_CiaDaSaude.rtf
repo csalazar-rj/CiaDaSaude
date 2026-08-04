@@ -1,0 +1,147 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2870
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww19940\viewh12280\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs26 \cf0 Nome do Sistema: 	CRMCDS		\
+Descri\'e7\'e3o:			Sistema de CRM para farm\'e1cia de manipula\'e7\'e3o \'93Cia da Sa\'fade\'94\
+\
+Objetivo:			M\'faltiplos atendentes sob um \'fanico n\'famero. Demandas distribu\'eddas de forma\
+				eficiente e um atendimento mais r\'e1pido sem perda de mensagens.\
+\
+\
+Arquitetura:			Sistema WEB baseado em cloud\
+Poss\'edveis Linguagens: 	HTML, CSS, JavaScript, TypeScript\
+FrontEnd:			React + TypeScript, NextJS\
+BackEnd:			Node.Js, PostgreSQL\
+				\
+\
+\
+\
+[ Funcionalidades do Sistema ]\
+\
+	a. Chatbot : automatizar o atendimento atrav\'e9s de chatbots personalizados		:: poss\'edveis fun\'e7\'f5es:\
+			- triagem de novos contatos\
+			- capta\'e7\'e3o de or\'e7amentos e receitas\
+			- pesquisa de satisfa\'e7\'e3o p\'f3s-venda\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+	Um ChatBot (configur\'e1vel) inicia o primeiro contato com o cliente. Assim que a mensagem do cliente chega ele recebe a primeira mensagem do ChatBot, como no 	exemplo abaixo: \
+\
+	- Seja bem vindo a < nome da farm\'e1cia >. Como posso te ajudar ? As op\'e7\'f5es abaixo s\'e3o exibidas na resposta do WhatsApp da farm\'e1cia para o cliente:\
+		- solicitar or\'e7amento\
+		- outros assuntos\
+\
+		\
+		Caso o cliente escolha a primeira op\'e7\'e3o ( solicitar or\'e7amento ) a pergunta ( Voc\'ea possui receita ? ) \'e9 envida ao cliente, e duas op\'e7\'f5es de resposta\
+		s\'e3o exibidas ao cliente :\
+			- Sim\
+				Se o cliente escolher a resposta ( Sim ), a mensagem abaixo \'e9 exibida ao cliente solicitando que ele tire uma foto ou anexe uma receita:\
+					:: tire a foto ou anexe a sua receita\
+\
+			- N\'e3o\
+				Se o cliente escolher a resposta ( N\'e3o ), a mensagem abaixo \'e9 exibida:\
+					:: Entendi. Qual produto ou f\'f3rmula voc\'ea gostaria de ter o or\'e7amento ?\
+\
+		Ap\'f3s o cliente responder Sim ou N\'e3o o chatbot direciona o processo para o pr\'f3ximo step. Neste momento, uma mensagem \'e9 exibida ao cliente informando:\
+			\'93Obrigado! Vou transferir voc\'ea para um dos nossos atendentes.\'94\
+\
+		\
+		Obs: Todas as mensagens do ChatBot devem ser customiz\'e1veis e o Administrador do sistema deve ser a \'fanica pessoa com permiss\'e3o para customiza-las, 			assim como, Incluir ou remover etapas do ChatBot.\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+\
+	b. Integra\'e7\'e3o com API do WhatsApp Business\
+	\
+	c. Gest\'e3o de Filas: Organize seu atendimento em filas, como:\
+		- atendimento\
+		- retirada\
+		- priorit\'e1rios\
+\
+	d. Mensagens R\'e1pidas: Salve respostas padr\'e3o para agilizar o atendimento do dia a dia\
+		Necess\'e1rio entender funcionamento\
+\
+	e. Etiquetas: Categorize e filtre seus contatos para um atendimento mais organizado\
+\
+	f. Kanban personalizado: Visualize os atendimentos por etapas do seu processo comercial, 		do jeito que a sua farm\'e1cia trabalha.\
+\
+	g. Agendamento de Mensagens: Programe mensagens para serem enviadas em data \
+		e hor\'e1rio espec\'edficos\
+\
+	h. Campanhas segmentas: Dispare mensagens em massa para a sua base de contatos.\
+\
+	i. Chat Interno: Troque informa\'e7\'f5es com sua equipe dentro da plataforma para agilizar \
+		decis\'f5es durante o atendimento\
+\
+	j. Aviso de Expediente: Informe automaticamente hor\'e1rios de atendimento e retorno \
+		para mensagens recebidas fora do expediente\
+\
+	k. Dashboard visual com as seguintes vis\'f5es:\
+		- Total de atendimentos (gr\'e1fico de barra vertical) por atendentes que podem ser filtrados por:\
+			:: data inicial e data final\
+			:: atendimentos conclu\'eddos\
+			:: atendimentos cancelados\
+			:: se novo atendimento ou retorno\
+\
+		- Medicamento com mais sa\'edda (gr\'e1fico de barra verrical) em um range de datas (Inicio e Fim) a serem informadas como par\'e2metros\
+\
+		- M\'e9dico que mais prescreveu (gr\'e1fico de pizza) em um per\'edodo de datas (Inicio e Fim) a ser informado como par\'e2metro\
+\
+		- Novos clientes captados no m\'eas corrente\
+\
+	\
+\
+\
+1. Escopo do projeto\
+\
+O processo se inicia com a capta\'e7\'e3o do or\'e7amento atrav\'e9s do WhatsApp. Este procedimento pode ser feito atrav\'e9s de um site institucional ou atrav\'e9s de uma \
+Mensagem direta para o WhatsApp da farm\'e1cia. O WhatsApp da farm\'e1cia ser\'e1 o whatsApp business.\
+\
+\
+\
+[ Kanban ]\
+\
+Ap\'f3s o fluxo do ChatBot encerrar, o encaminhamento do cliente a um atendente \'e9 acompanhado atrav\'e9s um Kanban personalizado. Neste Kanban os atendentes, assim \
+como, o Administrador/Farmac\'eautico visualizam os atendimentos por etapas do seu processo comercial. As etapas do processo comercial, definem o Modus Operandi da farm\'e1cia. \
+\
+Os atendimentos s\'e3o organizados por filas, e estas filas podem ser customiz\'e1veis no sistema. \
+Estas filas podem ser:\
+	- atendimento\
+	- retirada\
+	- priorit\'e1rios\
+	- outros tipos\
+\
+Mediante a solicita\'e7\'e3o enviada atrav\'e9s do ChatBot o mesmo deve direcionar o cliente para a fila correspondente a sua solicita\'e7\'e3o.\
+Por exemplo: \
+	- Se o cliente iniciar a conversa para um novo or\'e7amento, o seu atendimento ser\'e1 direcionado para a fila (Atendimento) dentro do Kanban.\
+	- Se o cliente iniciar a conversa para falar sobre um pedido j\'e1 realizado, o seu atendimento ser\'e1 direcionado para a fila (Retirada) dentro do Kanban\
+\
+	E assim por diante.\
+\
+Dentro do Kanban, o atendente escolhe qual fila de atendimento vai acompanhar.\
+\
+Importante. Somente o atendente pode finalizar um atendimento. \
+		O Administrador/Farmac\'eautico dever\'e1 possuir todas as permiss\'f5es do sistema. (Definido no m\'f3dulo de seguran\'e7a) Entretanto, cabe ao atendente \
+		acompanhar a solicita\'e7\'e3o do cliente do in\'edcio ao fim do fluxo do processo.\
+\
+\
+Uma vez escolhida a fila de atendimento dentro do Kanban, o atendente ir\'e1 acompanhar todas as etapas do atendimento. Para a fila \'93atendimento\'94 as etapas ser\'e3o:\
+	- Recebido\
+	- Em preparo\
+	- Pagamento\
+	- Retirada\
+\
+As etapas para cada Fila de Atendimento dever\'e3o ser personaliz\'e1veis dentro do sistema.\
+Em cada uma destas etapas o atendente visualizar\'e1 pequenos \'93cards\'94 (como no JIRA ou no TRELLO) cada um referente a um cliente distinto.\
+O atendente deve ter a possibilidade de mover estes cards para a frente ou para tr\'e1s conforme a etapa.\
+\
+\
+\
+ \
+}

@@ -7,28 +7,54 @@
   <link rel="stylesheet" href="./assets/css/site_responsive.css">
 </head>
 <body>
-  <header class="topbar">
-    <nav class="nav">
-      <a class="brand" href="index.html">
-        <span class="brand-mark">CS</span>
-        <span>Cia da Saúde</span>
+  <header>
+
+    <div class="nav-pill">
+      <a href="#top" aria-label="Cia da Saúde - Início">
+        <img src="./assets/img/logo_img.png" alt="Cia da Saúde - Farmácia de Manipulação" class="logo-img">
       </a>
 
-      <div class="menu">
-        <div class="submenu">
-          <button class="submenu-button">Sobre</button>
-          <div class="submenu-panel">
-            <a href="./sobre/equipe.html">Nossa Equipe</a>
-            <a href="./sobre/historia.html">Nossa História</a>
-            <a href="./sobre/produtos.html">Nossos Produtos</a>
-            <a href="./sobre/laboratorio.html">Nosso laboratório</a>
+      <nav class="links">
+        <!-- 
+        <a class="brand" href="index.html">
+          <span class="brand-mark">CS</span>
+          <span>Cia da Saúde</span>
+        </a>
+        -->
+
+        <!-- <div class="menu"> -->
+          <!-- Disable Menu Item (Sobre) 
+          <div class="submenu">
+            <button class="submenu-button">Sobre</button>
+            <div class="submenu-panel">
+              <a href="./sobre/equipe.html">Nossa Equipe</a>
+              <a href="./sobre/historia.html">Nossa História</a>
+              <a href="./sobre/produtos.html">Nossos Produtos</a>
+              <a href="./sobre/laboratorio.html">Nosso laboratório</a>
+            </div>
           </div>
-        </div>
-        <a href="blog.html">Blog</a>
-        <a href="orcamento.html">Orçamento</a>
-        <a href="farmacia.html">A Farmácia</a>
+           -->
+          <a href="#formula">Fórmula</a>
+          <a href="#produtos">Linhas</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#emagrecimento">Emagrecimento</a>
+          <a href="#dicas">Dicas</a>
+          <a href="blog.html">Blog</a>
+          <a href="orcamento.html">Orçamento</a>
+          <a href="farmacia.html">Farmácia</a>
+        
+        <!-- </div> --> 
+      </nav>
+
+      <div class="nav-cta">
+        <a class="nav-whatsapp" href="https://wa.me/5521982587969" target="_blank" rel="noopener">WhatsApp</a>
       </div>
-    </nav>
+    </div>  
+
+    <!-- 
+    
+    -->
   </header>
 
   <main>
@@ -83,64 +109,332 @@
       </div>
     </section>
 
+    <section class="hero monica-hero" style="padding-top:56px;" id="formula">
+      <div class="monica-container monica-hero-grid">
+        <div>
+          <span class="monica-eyebrow">Farmácia de manipulação · Vila da Penha</span>
+          <h1>Cada fórmula,<br>feita <em>sob medida</em><br>para você</h1>
+          <p class="monica-lead">Há mais de 30 anos pesamos, misturamos e conferimos cada fórmula uma a uma — na dosagem exata que o seu tratamento pede, nunca em série.</p>
+          <div class="monica-hero-ctas">
+            <a class="monica-btn monica-btn-primary" href="https://wa.me/5521982587969" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              Falar no WhatsApp
+            </a>
+            <a class="monica-btn monica-btn-outline" href="#produtos">Ver linhas de manipulação</a>
+          </div>
+          <div class="monica-hero-stats">
+            <div class="monica-hero-stat"><span class="num">30+</span><span class="label">anos de experiência</span></div>
+            <div class="monica-hero-stat"><span class="num">100%</span><span class="label">fórmulas personalizadas</span></div>
+            <div class="monica-hero-stat"><span class="num">1</span><span class="label">farmacêutico responsável sempre presente</span></div>
+          </div>
+        </div>
+
+        <div class="monica-capsule-wrap" aria-hidden="true">
+          <div class="monica-orbit-ring monica-orbit-1"><span class="monica-orbit-dot"></span></div>
+          <div class="monica-orbit-ring monica-orbit-2"><span class="monica-orbit-dot"></span></div>
+          <div class="monica-capsule" data-granule-capsule>
+            <div class="half-top"></div>
+            <div class="half-bottom"></div>
+            <div class="shine"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Information - Begin -->
+    <div class="trust-strip">
+      <div class="container">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1z"/></svg>
+          Mais de 30 anos na Vila da Penha
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+          Controle de qualidade em cada lote
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Farmacêutico sempre à disposição
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Seg. a sex., 9h às 18h
+        </div>
+      </div>
+    </div>
+    <!-- Additional Information - End -->
+
+
     <section class="section" id="produtos">
       <div class="section-head">
         <div>
           <span class="eyebrow">Principais linhas</span>
-          <h2>Produtos manipulados pela Cia da Saúde</h2>
+          <h2>Uma fórmula para cada objetivo</h2>
         </div>
-        <p>Explore as linhas mais procuradas e veja detalhes sobre indicação, cuidados e orientação profissional.</p>
+        <p class="lead">Explore as linhas mais procuradas e veja detalhes sobre <em>indicação, cuidados e orientação profissional</em>.</p>
+    
+        <p class="lead">Trabalhamos por linha <em>terapêutica</em>, sempre a partir de <em>prescrição médica ou farmacêutica</em>.</p> 
       </div>
       <div class="product-grid">
-        <a class="product-card" href="./produtos/tonicos-capilares.html">
-          <img src="./assets/img/prod-tonicos.svg" alt="Tonicos Capilares">
-          <div class="pad">
-            <h3>Tônicos Capilares</h3>
-            <p>Cuidado personalizado para couro cabeludo e fios.</p>
-          </div>
-        </a>
+        <div class="product-card reveal in">
+          <h3 class="prod-card-h3">Emagrecimento & metabolismo</h3>
+          <p>Fórmulas para apoiar tratamentos de controle de peso, aceleradores metabólicos, termogênicos 
+            e moduladores de apetite - sempre a partir de prescrição médica ou farmacêutica.
+          </p>
+          <span class="linha-tag">Sob prescrição</span>
+        </div>
+        
+        <div class="product-card reveal in">
+          <h3 class="prod-card-h3">Sono & ansiedade</h3>
+          <p>Fórmulas calmantes e indutoras do sono, dosadas com cuidado.</p>
+          <span class="linha-tag">Sob prescrição</span>
+        </div>
 
-        <a class="product-card" href="./produtos/pre-treino.html">
-          <img src="./assets/img/prod-pre-treino.svg" alt="Pre-Treino">
-          <div class="pad">
-            <h3>Pré-Treino</h3>
-            <p>Fórmulas de apoio para desempenho com acompanhamento.</p>
-          </div>
-        </a>
+        <div class="product-card reveal in">
+          <h3 class="prod-card-h3">Capilar & unhas</h3>
+          <p>Tônicos e loções para fortalecer fios e unhas.</p>
+          <span class="linha-tag">Uso contínuo</span>
+        </div>
 
-        <a class="product-card" href="./produtos/emagrecimento.html">
-          <img src="./assets/img/prod-emagrecimento.svg" alt="Emagrecimento">
-          <div class="pad">
-            <h3>Emagrecimento</h3>
-            <p>Estratégias individualizadas conforme prescrição.</p>
-          </div>
-        </a>
+        <div class="product-card reveal in">
+          <h3 class="prod-card-h3">Imunidade</h3>
+          <p>Vitaminas e minerais combinados para reforçar as defesas do corpo.</p>
+          <span class="linha-tag">Suplementar</span>
+        </div>
 
-        <a class="product-card" href="./produtos/menopausa.html">
-          <img src="./assets/img/prod-menopausa.svg" alt="Menopausa">
-          <div class="pad">
-            <h3>Menopausa</h3>
-            <p>Apoio a fases hormonais com fórmulas sob orientação.</p>
-          </div>
-        </a>
+        <div class="product-card reveal in">
+          <h3 class="prod-card-h3">Reposição hormonal</h3>
+          <p>Fórmulas bioidênticas preparadas conforme exame e prescrição médica.</p>
+          <span class="linha-tag">Sob prescrição</span>
+        </div>
 
-        <a class="product-card" href="./produtos/ansiedade-e-sono.html">
-          <img src="./assets/img/prod-ansiedade.svg" alt="Ansiedade e Sono">
-          <div class="pad">
-            <h3>Ansiedade</h3>
-            <p>Compostos prescritos para suporte ao equilibrio diario.</p>
-          </div>
-        </a>
+        <div class="product-card reveal in">
+          <h3 class="prod-card-h3">Dermocosmética</h3>
+          <p>Cremes anti-idade, clareadores e tratamentos para acne sob medida.</p>
+          <span class="linha-tag">Uso contínuo</span>
+        </div>
 
-        <a class="product-card" href="./produtos/sono.html">
-          <img src="./assets/img/prod-sono.svg" alt="Sono">
-          <div class="pad">
-            <h3>Sono</h3>
-            <p>Opções manipuladas para rotinas de descanso.</p>
-          </div>
-        </a>
       </div>
     </section>
+
+    <!-- Section ( Serviços ) Begin -->
+    <section class="bg-areia" id="servicos">
+      <div class="container">
+        <div class="section-head center reveal" style="margin-left:auto;margin-right:auto;">
+          <span class="eyebrow">O que fazemos</span>
+          <h2>Serviços pensados para o seu tratamento</h2>
+          <p class="lead" style="margin:0 auto;">Do medicamento prescrito ao cuidado diário com a pele — manipulamos com a mesma atenção em cada etapa.</p>
+        </div>
+        <div class="cards-grid">
+          <div class="service-card reveal">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M10.5 20.5 3.5 13.5a5 5 0 0 1 7-7l7 7a5 5 0 0 1-7 7z"/><path d="M8.5 8.5l7 7"/></svg></div>
+            <h3>Fórmulas médicas</h3>
+            <p>Manipulamos exatamente o que foi prescrito — pelo seu médico ou por prescrição farmacêutica —, na concentração e forma indicadas.</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg></div>
+            <h3>Suplementos personalizados</h3>
+            <p>Vitaminas e nutrientes combinados na dose que o seu corpo precisa, sem excessos.</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 3c-3 3-6 6.5-6 10.5A6 6 0 0 0 18 13.5C18 9.5 15 6 12 3z"/></svg></div>
+            <h3>Dermocosméticos sob medida</h3>
+            <p>Cremes, séruns e loções formulados para o seu tipo de pele e sua rotina.</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+            <h3>Fitoterápicos</h3>
+            <p>Fórmulas à base de plantas, preparadas com a mesma precisão de qualquer medicamento.</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4.5 12.5 9 8l3 3 4-4M20 5v4h-4"/></svg></div>
+            <h3>Linha veterinária</h3>
+            <p>Cuidado manipulado também para os pets da família, com sabor e dose adequados.</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M16 3v8M8 3v8M3 12h18"/></svg></div>
+            <h3>Retirada e entrega</h3>
+            <p>Retire na loja, na Av. Meriti, ou combine a entrega direto no seu endereço.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section ( Serviços ) End -->
+
+    <!-- Section ( Sobre ) Begin -->
+    <section id="sobre">
+      <div class="container sobre-grid">
+        <div class="reveal sobre-art in">
+          <img src="./assets/img/sobreImg.png" alt="simbolo da farmacia">
+          <div class="sobre-badge">
+            <span class="num">30+</span>
+            <span class="txt">anos cuidando da saúde de famílias da Vila da Penha e região</span>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <span class="eyebrow">Sobre a Cia da Saúde</span>
+          <h2>Manipulação é ofício,<br>não produção em série</h2>
+          <p class="lead">Cada receita que chega até nós é conferida, pesada e manipulada individualmente. Não trabalhamos com lotes genéricos: o que você recebe é feito para o seu organismo, na hora certa, na dose certa.</p>
+          <div class="sobre-points">
+            <div class="sobre-point">
+              <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+              <div>
+                <h3>Acompanhamento próximo</h3>
+                <p>Você fala direto com quem manipula sua fórmula — sem intermediários, sem burocracia.</p>
+              </div>
+            </div>
+
+            <div class="sobre-point">
+              <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+              <div>
+                <h3>Rigor em cada etapa</h3>
+                <p>Da pesagem à embalagem, cada fórmula passa por controle de qualidade antes de chegar até você.</p>
+              </div>
+            </div>
+            
+            <div class="sobre-point">
+              <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+              <div>
+                <h3>Tradição de bairro</h3>
+                <p>Geramos confiança há três décadas atendendo famílias inteiras — de pais a filhos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section ( Sobre ) End -->
+
+
+    <!-- Section Emagrecimento Begin -->
+    <section id="emagrecimento" class="bg-areia">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Emagrecimento &amp; metabolismo</span>
+          <h2>Fórmulas para apoiar o seu tratamento de peso</h2>
+          <p class="lead">Manipulamos exatamente o que foi prescrito — pelo seu médico ou por prescrição farmacêutica —, na dose certa para a sua fase de tratamento. A fórmula é um apoio — o resultado vem do acompanhamento como um todo.</p>
+        </div>
+
+        <div class="cards-grid">
+          <div class="service-card reveal">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2v6M12 16v6M4.2 4.2l4.2 4.2M15.6 15.6l4.2 4.2M2 12h6M16 12h6M4.2 19.8l4.2-4.2M15.6 8.4l4.2-4.2"/></svg></div>
+            <h3>Termogênicos</h3>
+            <p>Combinações formuladas para apoiar o gasto energético, dentro do plano definido por prescrição médica ou farmacêutica.</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 20c4-3 8-6.5 8-11a5 5 0 0 0-9-3 5 5 0 0 0-9 3c0 4.5 4 8 8 11z"/></svg></div>
+            <h3>Moduladores de apetite</h3>
+            <p>Fórmulas sob prescrição médica ou farmacêutica, ajustadas ao seu histórico e à fase do tratamento.</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+            <h3>Aceleradores metabólicos</h3>
+            <p>Combinações individualizadas, pensadas para o seu metabolismo — não uma fórmula padrão.</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+            <h3>Antioxidantes &amp; anti-inflamatórios</h3>
+            <p>Apoio complementar ao tratamento, sempre alinhado com prescrição médica ou farmacêutica.</p>
+          </div>
+        </div>
+
+        <div class="faq-wrap reveal">
+          <h3 style="margin-bottom:20px;">Perguntas frequentes</h3>
+          <details class="faq-item" open>
+            <summary>Preciso de receita para manipular fórmulas de emagrecimento?</summary>
+            <p>Sim, sempre. Aceitamos tanto a prescrição médica quanto a prescrição farmacêutica, dentro do que a legislação permite ao farmacêutico prescrever. Em qualquer caso, a dose e a duração seguem o que foi prescrito.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Qual a diferença entre prescrição médica e prescrição farmacêutica?</summary>
+            <p>O médico pode prescrever qualquer fórmula dentro do seu tratamento. Já a prescrição farmacêutica, feita pelo nosso farmacêutico responsável, cobre um grupo mais restrito de fórmulas, sempre dentro do que a legislação autoriza.</p>
+          </details>
+          <details class="faq-item">
+            <summary>A fórmula manipulada substitui dieta e atividade física?</summary>
+            <p>Não. Ela funciona como apoio a um tratamento mais amplo, que inclui alimentação, rotina e acompanhamento médico contínuo.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Qual a diferença entre um suplemento pronto e uma fórmula manipulada?</summary>
+            <p>Na manipulação, a dose e a combinação dos ativos são ajustadas para o seu caso específico, e não para um padrão genérico de prateleira.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Posso trazer minha receita direto pelo WhatsApp?</summary>
+            <p>Pode sim — envie a foto da receita pelo WhatsApp e a gente já adianta o orçamento e o prazo da sua fórmula.</p>
+          </details>
+        </div>
+
+        <div class="cta-inline reveal">
+          <p>Já tem uma receita de emagrecimento ou metabolismo em mãos?</p>
+          <a class="btn btn-primary" href="https://wa.me/5521995337189" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            Enviar receita no WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Section Serviços End -->
+
+    <!-- Section ( Dicas ) Begin -->
+    <section id="dicas">
+      <div class="container">
+        <div class="section-head center reveal" style="margin-left:auto;margin-right:auto;">
+          <span class="eyebrow">Dicas da Cia</span>
+          <h2>Um pouco do que aprendemos em 30 anos de balcão</h2>
+        </div>
+        <div class="dicas-grid">
+          <div class="dica-card reveal">
+            <span class="dica-num">Conservação</span>
+            <h3>Como guardar sua fórmula manipulada</h3>
+            <p>Luz, calor e umidade alteram a validade de qualquer fórmula. Guarde no local indicado na embalagem e respeite sempre o prazo informado — mesmo que o produto pareça inalterado.</p>
+            <a class="dica-link" href="https://wa.me/5521995337189" target="_blank" rel="noopener">Tirar dúvida no WhatsApp
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+          <div class="dica-card reveal">
+            <span class="dica-num">Dosagem</span>
+            <h3>Por que a dose certa faz diferença</h3>
+            <p>Duas pessoas com o mesmo diagnóstico podem precisar de doses diferentes. É por isso que a manipulação existe: ajustar o tratamento ao seu peso, idade e histórico — não o contrário.</p>
+            <a class="dica-link" href="https://wa.me/5521995337189" target="_blank" rel="noopener">Tirar dúvida no WhatsApp
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+          <div class="dica-card reveal">
+            <span class="dica-num">Suplementação</span>
+            <h3>Quando vale a pena manipular</h3>
+            <p>Manipular faz sentido quando você precisa de uma combinação, dose ou forma que não existe pronta na prateleira. Fale com seu médico, ou com nosso farmacêutico, antes de trocar qualquer suplemento de linha.</p>
+            <a class="dica-link" href="https://wa.me/5521995337189" target="_blank" rel="noopener">Tirar dúvida no WhatsApp
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+          <div class="dica-card reveal">
+            <span class="dica-num">Emagrecimento &amp; metabolismo</span>
+            <h3>Manipulados não substituem hábito nenhum</h3>
+            <p>Fórmulas para metabolismo e controle de peso funcionam como apoio a um tratamento, nunca como solução isolada. O acompanhamento médico ou farmacêutico é o que garante uma fórmula segura e adequada ao seu caso.</p>
+            <a class="dica-link" href="https://wa.me/5521995337189" target="_blank" rel="noopener">Tirar dúvida no WhatsApp
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BANNER -->
+    <section style="padding-top:0;">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <div>
+            <h2>Traga sua receita e converse com a gente</h2>
+            <p>Atendimento humano, de segunda a sexta, das 9h às 18h.</p>
+          </div>
+          <a class="btn btn-primary" href="https://wa.me/5521995337189" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            Chamar no WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section ( Dicas ) End -->
 
     <section class="section band">
       <div class="inner">
@@ -152,26 +446,32 @@
 
           <p>Recebimento da prescrição, analise farmacêutica, pesagem, preparo, controle de qualidade e orientação de uso.</p>
         </div>
-        <a class="wide-link" href="manipulacao.html">
+        <a class="wide-link-processo-magistral" href="manipulacao.html">
           <img src="./assets/img/producao.svg" alt="Processo de producao de medicamento manipulado">
         </a>
       </div>
     </section>
 
     <section class="section">
-      <div class="section-head">
+      <div class="section-head center reveal in" style="margin-left: auto; margin-right: auto;">
         <div>
           <span class="eyebrow">Novidade</span>
           <h2>Manipulação para área Vet</h2></div>
         <p>Em breve a Cia da Saúde também atenderá prescrições veterinárias com formas farmacêuticas pensadas para pets.</p>
       </div>
-      <a class="wide-link" href="vet.html">
+      <a class="wide-link-vet">
         <img src="./assets/img/CiaDaSaude_LP_Vet.png" alt="Cachorro e gato anunciando manipulacao veterinaria">
       </a>
     </section>
   </main>
 
+
   <footer class="editable-footer" data-footer></footer>
+  <a class="whatsapp-float" href="https://wa.me/5521982587969" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M16 4a11.7 11.7 0 0 0-10 17.7L4.8 28l6.5-1.7A11.8 11.8 0 1 0 16 4Zm0 2.3a9.4 9.4 0 0 1 0 18.8c-1.6 0-3.2-.4-4.6-1.2l-.5-.3-3.1.8.8-3-.3-.5A9.4 9.4 0 0 1 16 6.3Zm-4.1 4.4c-.2 0-.5.1-.7.3-.7.7-1 1.4-1 2.2 0 1.2.9 2.7 2.1 3.9 1.4 1.5 3.5 2.8 5.2 2.8.8 0 1.6-.3 2.2-.9.2-.2.3-.5.3-.7l-.5-2c-.1-.3-.3-.4-.6-.5l-1.5-.4c-.2 0-.5 0-.7.2l-.7.9c-.1.2-.4.2-.6.1-.8-.4-1.5-.9-2-1.5-.6-.5-1.1-1.2-1.5-2-.1-.2 0-.5.1-.6l.8-.7c.2-.2.3-.5.2-.8l-.4-1.5c-.1-.3-.3-.5-.6-.6l-1.1-.2Z"/>
+    </svg>
+  </a>
   <script src="./assets/js/app_responsivo.js"></script>
 </body>
 </html>

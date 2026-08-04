@@ -8,18 +8,6 @@ const FOOTER = {
   instagram: "@ciadasaude"
 };
 
-// scroll reveal
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-
 function setupResponsiveMenus() {
   document.querySelectorAll(".nav").forEach((nav, index) => {
     const menu = nav.querySelector(".menu");
@@ -146,24 +134,12 @@ function setupAuth() {
 const defaultPosts = [
   {
     id: "formula-personalizada",
-    title: "Preço chama atenção. Qualidade conquista confiança.",
-    category: "Manipulação",
-    author: "Dra. Mônica Alves",
-    date: "2026-08-05",
-    body: [
-      "Uma fórmula manipulada não é apenas uma combinação de ingredientes.",
-
-      "Ela é resultado de um processo que envolve conhecimento técnico, responsabilidade, controle de qualidade e o compromisso de entregar um tratamento personalizado.",
-    
-      "Na Cia da Saúde, cada detalhe importa: da seleção das matérias-primas à conferência final antes da entrega.",
-
-      "É assim que transformamos mais de 30 anos de experiência em confiança para milhares de pacientes.",
-
-      "Porque a sua saúde merece muito mais do que o menor preço. Merece qualidade em cada fórmula."    
-    ]
-    
-  } 
-    /*,
+    title: "Quando uma formula manipulada pode ajudar",
+    category: "Manipulacao",
+    author: "Farmaceutico responsavel",
+    date: "2026-06-25",
+    body: "A manipulacao permite ajustar dose, forma farmaceutica, sabor e combinacoes conforme a prescricao. O acompanhamento farmaceutico e essencial para orientar conservacao, uso correto e seguranca."
+  },
   {
     id: "sono-e-rotina",
     title: "Sono, rotina e cuidado individualizado",
@@ -171,7 +147,7 @@ const defaultPosts = [
     author: "Equipe Cia da Saude",
     date: "2026-06-25",
     body: "Habitos consistentes e avaliacao profissional ajudam a identificar estrategias adequadas para cada pessoa. Produtos manipulados devem ser usados com orientacao."
-  } */
+  }
 ];
 
 function getPosts() {
@@ -219,29 +195,14 @@ function setupBlog() {
   if (postBody) {
     const id = new URLSearchParams(location.search).get("id");
     const post = getPosts().find((item) => item.id === id) || defaultPosts[0];
-    
-    const bodyHtml = Array.isArray(post.body)
-      ? post.body.map(paragraph => `<p>${paragraph}</p>`).join("")
-      : `<p>${post.body}</p>`;
-
     postBody.innerHTML = `
       <span class="eyebrow">${post.category}</span>
-
       <h1>${post.title}</h1>
-
-      <p class="post-meta">
-        ${new Date(post.date).toLocaleDateString("pt-BR")} |
-        Criado por: ${post.author}
-      </p>
-
-      <div class="post-content">
-        ${bodyHtml}
-      </div>
+      <p>${new Date(post.date).toLocaleDateString("pt-BR")} | Criado por: ${post.author}</p>
+      <p>${post.body}</p>
     `;
-
   }
 }
-
 
 setupResponsiveMenus();
 renderFooter();
@@ -249,14 +210,3 @@ setupBudgetForms();
 setupCapsuleGranules();
 setupAuth();
 setupBlog();
-
-/** 
- *   postBody.innerHTML = `
-      <span class="eyebrow">${post.category}</span>
-      <h1>${post.title}</h1>
-      <p>${new Date(post.date).toLocaleDateString("pt-BR")} | Criado por: ${post.author}</p>
-      
-      <p>${post.body}</p> 
-
-    `;
- */

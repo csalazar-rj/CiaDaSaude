@@ -9,69 +9,44 @@
 </head>
 
 <body>
-    <header class="topbar">
-        <nav class="nav">
-            <a class="brand" href="index.html">
-                <span class="brand-mark">CS</span><span>Cia da Saúde</span>
-            </a>
-            <div class="menu">
-                <a href="sobre/equipe.html">Sobre</a>
-                <a href="blog.html">Blog</a>
-                <a href="orcamento.html">Orçamento</a>
-                <a href="farmacia.html">A Farmácia</a>
-                <a href="login.html">Login</a>
-            </div>
+
+    <header>
+        <div class="nav-pill">
+        <a href="index.html#top" aria-label="Cia da Saúde - Início">
+            <img src="./assets/img/logo_img.png" alt="Cia da Saúde - Farmácia de Manipulação" class="logo-img">
+        </a>
+
+        <nav class="links">
+
+            <a href="index.html#formula">Fórmula</a>
+            <a href="index.html#produtos">Linhas</a>
+            <a href="index.html#servicos">Serviços</a>
+            <a href="index.html#sobre">Sobre</a>
+            <a href="index.html#emagrecimento">Emagrecimento</a>
+            <a href="index.html#dicas">Dicas</a>
+            <a href="blog.html">Blog</a>
+            <a href="orcamento.html">Orçamento</a>
+            <a href="farmacia.html">Farmácia</a>
+            
         </nav>
+
+        <div class="nav-cta">
+            <a class="nav-whatsapp" href="https://wa.me/5521982587969" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+        </div>  
     </header>
+
 
     <main>
         <div class="page-hero">
             <section class="section"><span class="eyebrow">Conteúdo farmacêutico</span>
                 <h1>Blog Cia da Saúde</h1>
-                <p>Materias sobre manipulação, bem-estar, prescrição e cuidados de saúde.</p>
+                <p>Aqui você encontra conteúdo sobre: manipulação, bem-estar, prescrição e cuidados de saúde.</p>
             </section>
         </div>
 
         <section class="content wide">
-            <div class="notice hidden" data-blog-admin>
-                <h3>Publicar nova matéria</h3>
-                <form data-post-form>
-                    <div class="form-grid">
-                        <div class="field">
-                            <label>Titulo: <input name="title" required></label>
-                        </div>
-                        
-                        <div class="field">
-                            <label>Criado por: <input name="author" required></label>
-                        </div>
 
-                        <div class="field">
-                            <label>Categoria: 
-                                <select name="category">
-                                    <option>Manipulação</option>
-                                    <option>Dermatologia</option>
-                                    <option>Nutrição</option>
-                                    <option>Bem-estar</option>
-                                    <option>Veterinária</option>
-                                </select>
-                            </label>
-                        </div>
-                        
-                        <div class="field">
-                            <label>Nova categoria
-                                <input name="categoryNew" placeholder="Opcional">
-                            </label>
-                        </div>
-                        
-                        <div class="field full">
-                            <label>Texto<textarea name="body" required></textarea></label>
-                        </div>
-
-                    </div>
-
-                    <button class="btn" type="submit">Publicar materia</button>
-                </form>
-            </div>
             <div class="card-grid" data-post-list></div>
         </section>
     </main>
