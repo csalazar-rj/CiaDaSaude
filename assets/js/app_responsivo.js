@@ -1,11 +1,11 @@
-const WHATSAPP_NUMBER = "5521982587969";
+const WHATSAPP_NUMBER = "5521995337189";
 const FOOTER = {
   nome: "Cia da Saúde",
   endereco: "Av. Meriti, 2128 - Vila da Penha, Rio de Janeiro - RJ, 21211-006",
-  telefone: "(21) 98258-7969",
-  email: "atendimento@ciadasaude.com.br",
-  horario: "Segunda à sexta, 8h as 18h | Sábado, 8h as 13h",
-  instagram: "@ciadasaude"
+  telefone: "(21) 99533-7189",
+  email: "ciadasaude.rj@gmail.com",
+  horario: "Segunda à sexta, 9h as 18h | Não abrimos aos Sábados!",
+  instagram: "@farmciadasaude"
 };
 
 // scroll reveal
@@ -70,12 +70,26 @@ function renderFooter() {
       <div>
         <h3>Funcionamento</h3>
         <p>${FOOTER.horario}</p>
-        <p>Instagram: ${FOOTER.instagram}</p>
+        <p>Instagram: 
+  <a href="https://instagram.com/${FOOTER.instagram.replace('@', '')}" target="_blank" rel="noopener noreferrer">
+    ${FOOTER.instagram}
+  </a></p>
       </div>
     </div>
     <div class="footer-note">© 2026 CiaDaSaúde. Ambiente de Testes para demonstração.         Created by: Carlos ESA</div>
   `;
 }
+
+/**
+ * replace the line below 
+ * <p>Instagram: ${FOOTER.instagram}</p>
+ * 
+ * by: new line below
+ * Instagram: 
+  <a href="https://instagram.com/${FOOTER.instagram.replace('@', '')}" target="_blank" rel="noopener noreferrer">
+    ${FOOTER.instagram}
+  </a>
+ */
 
 function setupBudgetForms() {
   document.querySelectorAll("[data-budget-form]").forEach((form) => {

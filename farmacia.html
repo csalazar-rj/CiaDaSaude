@@ -9,24 +9,49 @@
 </head>
 
 <body>
-    <header class="topbar">
+
+    <header>
+        <div class="nav-pill">
+        <a href="index.html" aria-label="Cia da Saúde - Início">
+            <img src="./assets/img/logo_img.png" alt="Cia da Saúde - Farmácia de Manipulação" class="logo-img">
+        </a>
+
         <nav class="nav">
-            <a class="brand" href="index.html">
-                <span class="brand-mark">CS</span>
-                <span>Cia da Saúde</span>
-            </a>
             
             <div class="menu">
-                <a href="sobre/equipe.html">Sobre</a>
-                <a href="blog.html">Blog</a>
-                <a href="orcamento.html">Orçamento</a>
-                <a href="farmacia.html">A Farmácia</a>
-                <a href="login.html">Login</a>
+            <!-- Disable Menu Item (Sobre) 
+            <div class="submenu">
+                <button class="submenu-button">Sobre</button>
+                <div class="submenu-panel">
+                <a href="./sobre/equipe.html">Nossa Equipe</a>
+                <a href="./sobre/historia.html">Nossa História</a>
+                <a href="./sobre/produtos.html">Nossos Produtos</a>
+                <a href="./sobre/laboratorio.html">Nosso laboratório</a>
+                </div>
+            </div>
+            -->
+            <a href="index.html#formula">Fórmula</a>
+            <a href="index.html#produtos">Linhas</a>
+            <a href="index.html#servicos">Serviços</a>
+            <a href="index.html#sobre">Sobre</a>
+            <a href="index.html#emagrecimento">Emagrecimento</a>
+            <a href="index.html#dicas">Dicas</a>
+            <a href="index.html#born">Magistral</a>
+            <a href="blog.html">Blog</a>
+            <a href="orcamento.html">Orçamento</a>
+            <a href="farmacia.html">Farmácia</a>
+            
             </div>
         </nav>
+
+        <div class="nav-cta">
+            <a class="nav-whatsapp" href="https://wa.me/5521995337189" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+        </div>  
     </header>
 
     <main>
+        <!-- 
         <div class="page-hero">
             <section class="section"><span class="eyebrow">Vila da Penha</span>
                 <h1>A Farmácia</h1>
@@ -35,17 +60,77 @@
         </div>
 
         <section class="content wide split">
-            <img class="wide-link" src="./assets/img/CiaDaSaude_faixada.png" alt="Fachada ilustrada da Cia da Saúde">
+            <img class="wide-link" src="./assets/img/frenteDeLoja.png" alt="Fachada ilustrada da Cia da Saúde">
             <div>
                 <h2>Atendimento próximo e laboratório estruturado</h2>
                 <p>A farmácia recebe prescrições, analisa viabilidade técnica, orienta o paciente e acompanha cada etapa
                     do preparo. A equipe trabalha com rotinas de conferência, rastreabilidade de insumos e boas práticas
-                    de manipulação.</p>
-                
-                <p>Lugar disponível para imagens reais
-                    <strong>assets/farmacia.svg</strong> quando estiverem disponíveis.</p>
+                    de manipulação.</p>                                
             </div>
         </section>
+        -->
+
+        <!-- Section ( Contato ) Begin  -->
+        <section id="contato" class="bg-areia">
+            <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Contato</span>
+                <h2>Venha até a nossa loja</h2>
+                <p class="lead">Estamos na Vila da Penha, prontos para atender você de segunda a sexta.</p>
+            </div>
+
+            <!-- Add the ( Frente de Loja ) Begin -->
+            <div class="contato-grid-loja">
+                <div class="contato-card-loja reveal">
+                    <img class="wide-link" src="./assets/img/frenteDeLoja.png" alt="Fachada ilustrada da Cia da Saúde">
+                </div>
+            </div>
+            <!-- Add the ( Frente de Loja ) End -->
+
+            <div class="contato-grid">
+                <div class="contato-card reveal">
+                <div class="contato-row">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+                    <div>
+                    <h3>Endereço</h3>
+                    <p>Av. Meriti, 2128 — Vila da Penha, Rio de Janeiro</p>
+                    </div>
+                </div>
+                <div class="contato-row">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
+                    <div>
+                    <h3>Telefone / WhatsApp</h3>
+                    <a href="https://wa.me/5521995337189" target="_blank" rel="noopener">(21) 99533-7189</a>
+                    </div>
+                </div>
+                <div class="contato-row">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+                    <div>
+                    <h3>Horário de funcionamento</h3>
+                    <p>Segunda a sexta, 9h às 18h</p>
+                    </div>
+                </div>
+                <div class="contato-row">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></div>
+                    <div>
+                    <h3>Prefere WhatsApp?</h3>
+                    <a href="https://wa.me/5521995337189" target="_blank" rel="noopener">Envie sua receita por foto e a gente retorna</a>
+                    </div>
+                </div>
+                </div>
+                <div class="map-frame reveal">
+                    <iframe
+                        src="https://maps.google.com/maps?q=Av.%20Meriti%2C%202128%2C%20Vila%20da%20Penha%2C%20Rio%20de%20Janeiro&output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Mapa — Cia da Saúde, Av. Meriti 2128, Vila da Penha">
+                    </iframe>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- Section ( Contato ) End  -->
+
     </main>
 
     <footer class="editable-footer" data-footer></footer>
