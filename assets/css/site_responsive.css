@@ -11,6 +11,8 @@
   --warn: #f3a23a;
   --shadow: 0 18px 50px rgba(23, 49, 45, .12);
   --radius-pill: 999px;
+  --whatsapp: #53ce5d;
+  --dark-wp: #14611a;
 
   --petroleo: #000201;
   --petroleo-2: #2e2f2f;
@@ -154,7 +156,7 @@ img {
   min-height: 42px;
   padding: 10px 18px;
   border-radius: var(--radius-pill);
-  background: var(--brand);
+  background: var(--whatsapp);
   color: var(--white);
   font-size: 14px;
   font-weight: 800;
@@ -164,7 +166,7 @@ img {
 
 .nav-whatsapp:hover,
 .nav-whatsapp:focus-visible {
-  background: var(--brand-dark);
+  background: var(--dark-wp);
   color: var(--white);
   outline-color: rgba(209, 140, 37, .36);
 }
@@ -179,7 +181,7 @@ img {
   display: grid;
   place-items: center;
   border-radius: 50%;
-  background: var(--brand);
+  background: var(--whatsapp);
   color: var(--white);
   box-shadow: 0 18px 38px rgba(23, 49, 45, .22);
   transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
@@ -187,7 +189,7 @@ img {
 
 .whatsapp-float:hover,
 .whatsapp-float:focus-visible {
-  background: var(--brand-dark);
+  background: var(--dark-wp);
   transform: translateY(-2px);
   box-shadow: 0 22px 44px rgba(23, 49, 45, .28);
 }
