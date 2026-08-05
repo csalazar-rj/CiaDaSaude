@@ -357,7 +357,7 @@ p { margin: 0 0 16px; color: var(--muted); }
 }
 
 .monica-btn-primary {
-  background: var(--brand);
+  background: var(--whatsapp);
   color: var(--white);
   box-shadow: 0 14px 30px -12px rgba(209, 140, 37, .58);
 }
@@ -524,13 +524,13 @@ p { margin: 0 0 16px; color: var(--muted); }
   padding: 12px 18px;
   border-radius: var(--radius-pill);
   border: 1px solid transparent;
-  background: var(--brand);
+  background: var(--whatsapp);
   color: var(--white);
   font-weight: 850;
   cursor: pointer;
 }
 
-.btn:hover { background: var(--brand-dark); }
+.btn:hover { background: var(--dark-wp); }
 
 .btn.secondary {
   background: var(--white);
@@ -545,7 +545,7 @@ p { margin: 0 0 16px; color: var(--muted); }
 }
 
 .btn-primary {
-  background: var(--laranja);
+  background: var(--whatsapp);
   color: var(--branco);
   box-shadow: 0 14px 30px -12px rgba(236,116,30,0.55);
 }
