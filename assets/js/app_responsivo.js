@@ -5,7 +5,9 @@ const FOOTER = {
   telefone: "(21) 99533-7189",
   email: "ciadasaude.rj@gmail.com",
   horario: "Segunda à sexta, 9h as 18h | Não abrimos aos Sábados!",
-  instagram: "@farmciadasaude"
+  instagram: "@farmciadasaude",
+  drMichel: "Dr Michel Abussamra CRF- RJ 24778",
+  draMonica: "Dra Mônica Alves CRF-RJ 14969"
  
 };
 
@@ -62,6 +64,9 @@ function renderFooter() {
       <div>
         <h3>${FOOTER.nome}</h3>
         <p>Farmácia de manipulação com atendimento humanizado, fórmulas personalizadas e acompanhamento técnico.</p>
+        <h4>Responsáveis Técnicos</h4>
+        <p><em>${FOOTER.drMichel}</em></p>
+        <p><em>${FOOTER.draMonica}</em></p>
       </div>
       <div>
         <h3>Atendimento</h3>
@@ -73,13 +78,24 @@ function renderFooter() {
         <p>${FOOTER.horario}</p>
               
         <a class="social-icon social-icon--instagram" href="https://instagram.com/${FOOTER.instagram.replace('@', '')}" target="_blank" rel="noopener noreferrer" aria-label="Instagram: ${FOOTER.instagram}" title="${FOOTER.instagram}">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true" focusable="false">
-            <path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.256 1.216.6 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.05 1.066.06 1.405.06 4.122s-.01 3.056-.06 4.122c-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.05-1.405.06-4.122.06s-3.056-.01-4.122-.06c-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.01 15.056 2 14.717 2 12s.01-3.056.06-4.122c.05-1.065.217-1.79.465-2.428a4.897 4.897 0 0 1 1.153-1.772A4.904 4.904 0 0 1 5.45 2.525c.637-.248 1.363-.415 2.428-.465C8.944 2.01 9.283 2 12 2zm0 1.802c-2.67 0-2.986.01-4.04.059-.976.045-1.505.207-1.858.344-.466.181-.8.398-1.15.748-.35.35-.567.684-.748 1.15-.137.353-.3.882-.344 1.857-.05 1.055-.06 1.37-.06 4.04s.01 2.986.06 4.04c.045.976.207 1.505.344 1.858.181.466.398.8.748 1.15.35.35.684.567 1.15.748.353.137.882.3 1.857.344 1.054.05 1.37.06 4.041.06s2.987-.01 4.04-.06c.976-.045 1.505-.207 1.858-.344.466-.181.8-.398 1.15-.748.35-.35.567-.683.748-1.15.137-.353.3-.882.344-1.857.05-1.055.06-1.37.06-4.041s-.01-2.986-.06-4.04c-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 0 0-.748-1.15 3.098 3.098 0 0 0-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.055-.05-1.37-.06-4.041-.06zm0 4.594a5.604 5.604 0 1 1 0 11.208 5.604 5.604 0 0 1 0-11.208zM12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5.884-9.717a1.31 1.31 0 1 1-2.62 0 1.31 1.31 0 0 1 2.62 0z"/>
-          </svg>
-        <span class="sr-only">${FOOTER.instagram}</span>
-        </a>
-        
 
+          <svg viewBox="0 0 48 48" width="26" height="26" aria-hidden="true" focusable="false">
+              <defs>
+                <radialGradient id="igAppGradient" cx="30%" cy="107%" r="150%">
+                  <stop offset="0%" stop-color="#fdf497"/>
+                  <stop offset="5%" stop-color="#fdf497"/>
+                  <stop offset="45%" stop-color="#fd5949"/>
+                  <stop offset="60%" stop-color="#d6249f"/>
+                  <stop offset="90%" stop-color="#285AEB"/>
+                </radialGradient>
+              </defs>
+              <rect width="48" height="48" rx="12" fill="url(#igAppGradient)"/>
+              <rect x="12" y="12" width="24" height="24" rx="7" fill="none" stroke="#fff" stroke-width="2.4"/>
+              <circle cx="24" cy="24" r="6.2" fill="none" stroke="#fff" stroke-width="2.4"/>
+              <circle cx="31.2" cy="16.8" r="1.6" fill="#fff"/>
+          </svg>
+          <span>Instagram</span>
+        </a>
       </div>
     </div>
     <div class="footer-note">© 2026 CiaDaSaúde. Ambiente de Testes para demonstração.         Created by: Carlos ESA</div>
@@ -95,7 +111,19 @@ function renderFooter() {
   <a href="https://instagram.com/${FOOTER.instagram.replace('@', '')}" target="_blank" rel="noopener noreferrer">
     ${FOOTER.instagram}
   </a>
- */
+
+ ------
+
+        <a class="social-icon social-icon--instagram" href="https://instagram.com/${FOOTER.instagram.replace('@', '')}" target="_blank" rel="noopener noreferrer" aria-label="Instagram: ${FOOTER.instagram}" title="${FOOTER.instagram}">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.256 1.216.6 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.05 1.066.06 1.405.06 4.122s-.01 3.056-.06 4.122c-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.05-1.405.06-4.122.06s-3.056-.01-4.122-.06c-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.01 15.056 2 14.717 2 12s.01-3.056.06-4.122c.05-1.065.217-1.79.465-2.428a4.897 4.897 0 0 1 1.153-1.772A4.904 4.904 0 0 1 5.45 2.525c.637-.248 1.363-.415 2.428-.465C8.944 2.01 9.283 2 12 2zm0 1.802c-2.67 0-2.986.01-4.04.059-.976.045-1.505.207-1.858.344-.466.181-.8.398-1.15.748-.35.35-.567.684-.748 1.15-.137.353-.3.882-.344 1.857-.05 1.055-.06 1.37-.06 4.04s.01 2.986.06 4.04c.045.976.207 1.505.344 1.858.181.466.398.8.748 1.15.35.35.684.567 1.15.748.353.137.882.3 1.857.344 1.054.05 1.37.06 4.041.06s2.987-.01 4.04-.06c.976-.045 1.505-.207 1.858-.344.466-.181.8-.398 1.15-.748.35-.35.567-.683.748-1.15.137-.353.3-.882.344-1.857.05-1.055.06-1.37.06-4.041s-.01-2.986-.06-4.04c-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 0 0-.748-1.15 3.098 3.098 0 0 0-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.055-.05-1.37-.06-4.041-.06zm0 4.594a5.604 5.604 0 1 1 0 11.208 5.604 5.604 0 0 1 0-11.208zM12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5.884-9.717a1.31 1.31 0 1 1-2.62 0 1.31 1.31 0 0 1 2.62 0z"/>
+          </svg>
+        <span class="sr-only">${FOOTER.instagram}</span>
+        </a>
+
+
+ ------
+  */
 
 function setupBudgetForms() {
   document.querySelectorAll("[data-budget-form]").forEach((form) => {
