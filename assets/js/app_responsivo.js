@@ -67,6 +67,7 @@ function renderFooter() {
         <h4>Responsáveis Técnicos</h4>
         <p><em>${FOOTER.drMichel}</em></p>
         <p><em>${FOOTER.draMonica}</em></p>
+        <p>* Podendo este ser o nosso farmacêutico de acordo com a Resolução 586/2013 do Conselho de Farmácia.</p>
       </div>
       <div>
         <h3>Atendimento</h3>
@@ -130,7 +131,11 @@ function setupBudgetForms() {
     form.addEventListener("submit", (event) => {
       event.preventDefault();
       const data = new FormData(form);
-      const files = form.querySelector('input[type="file"]')?.files?.length || 0;
+      const fileInput = form.querySelector('input[type="file"]');
+      const files = fileInput?.files ? Array.from(fileInput.files) : [];
+      const fileNames = files.map((file) => file.name).join(", ");
+
+
       const message = [
         "Solicitacao de orcamento - Cia da Saude",
         `Nome: ${data.get("nome")}`,
@@ -138,9 +143,40 @@ function setupBudgetForms() {
         `Telefone: ${data.get("telefone")}`,
         `Prescritor: ${data.get("prescritor")}`,
         `Descricao: ${data.get("descricao")}`,
-        `Receitas anexadas no site: ${files}`
+      
+        files.length
+          ? `Receitas anexadas no site (${files.length}): ${fileNames} - arquivo(s) baixado(s) automaticamente, favor anexar aqui na conversa`
+          : "Receitas anexadas no site: 0"
+            
       ].join("\n");
+
+      // O link do WhatsApp (wa.me) nao suporta anexar arquivos via URL - e uma
+      // limitacao da propria plataforma, nao do formulario. Como alternativa,
+      // baixamos o(s) arquivo(s) selecionados para o dispositivo do cliente,
+      // para que ele anexe manualmente na conversa que abre em seguida.
+
+      // IMPORTANTE: window.open precisa ser chamado ANTES de qualquer alert()
+      // ou operacao assincrona. Navegadores só permitem abrir uma nova aba
+      // sem bloqueio de pop-up se isso acontecer imediatamente dentro do
+      // gesto do usuario (o clique no botao). Um alert() antes do window.open
+      // "quebra" essa cadeia e o navegador passa a bloquear a aba do WhatsApp.
       window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, "_blank");
+
+      files.forEach((file) => {
+        const url = URL.createObjectURL(file);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = file.name;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(url);
+      });
+
+      if (files.length) {
+        alert(`${files.length} arquivo(s) baixado(s) para o seu dispositivo (${fileNames}). O WhatsApp vai abrir agora - por favor, anexe o(s) arquivo(s) baixado(s) na conversa antes de enviar.`);
+      }
+
     });
   });
 }
