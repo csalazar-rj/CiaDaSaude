@@ -98,7 +98,7 @@ function renderFooter() {
         </a>
       </div>
     </div>
-    <div class="footer-note">© 2026 CiaDaSaúde. Ambiente de Testes para demonstração.         Created by: Carlos ESA</div>
+    <div class="footer-note">© 2026 CiaDaSaúde. Criado por: Carlos ESA</div>
   `;
 }
 

@@ -735,7 +735,7 @@ main > img {
 .content.wide { max-width: 1180px; }
 
 .editable-footer {
-  background: #102722;
+  background: #070707;
   color: var(--white);
 }
 
@@ -1397,7 +1397,7 @@ AI source - End
     width: 340px;
     height: 340px;
   }
-  .product-grid, .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .product-grid, .card-grid, .cards-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .quote-box { max-width: 620px; }
 
   .sobre-grid {
@@ -1536,7 +1536,7 @@ AI source - End
     gap: 22px;
   }
 
-  .form-grid, .product-grid, .card-grid { grid-template-columns: 1fr; }
+  .form-grid, .product-grid, .card-grid, .cards-grid { grid-template-columns: 1fr; }
   
   .section, .content, .login-shell {
     padding-inline: 18px;
