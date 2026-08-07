@@ -201,19 +201,25 @@ img {
 }
 
 .hero {
-  background:
-    linear-gradient(90deg, rgba(208, 108, 31, 0.9), rgba(172, 110, 24, 0.72)),
-    url("hero-lab.svg") center/cover no-repeat;
+  background-image: 
+  linear-gradient(120deg, rgba(23, 49, 45, .82) 0%, rgba(23, 49, 45, .55) 45%, rgba(23, 49, 45, .28) 100%),
+  url(/assets/img/recepcaoLoja.jpeg);
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: var(--white);
 }
 
 .hero h1 {
   margin-bottom: 22px;
-  color: var(--ink);
+  color: var(--laranja-claro);
+  text-shadow: 0 2px 14px rgba(0, 0, 0, .45);
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(38px, 5.2vw, 60px);
   font-weight: 500;
   line-height: 1.12;
+  padding-top: 60px;
 }
 
 .hero-inner {
@@ -236,7 +242,8 @@ img {
 }
 
 .hero .eyebrow { 
-  color: var(--petroleo); 
+  color: var(--laranja-claro); 
+  text-shadow: 0 1px 8px rgba(0, 0, 0, .4);
 }
 
 h1, h2, h3 {
@@ -256,9 +263,42 @@ h3 {
 }
 
 p { margin: 0 0 16px; color: var(--muted); }
-.hero p { color: rgba(255,255,255,.88); font-size: 19px; max-width: 640px; }
+
+.hero p { 
+  color: rgba(255, 255, 255, .94);
+  text-shadow: 0 1px 10px rgba(0, 0, 0, .4);
+  font-size: 19px; 
+  max-width: 640px; 
+}
 
 .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+
+.hero-side-ctas {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 14px;
+}
+
+.hero-side-ctas .btn {
+  width: 100%;
+  gap: 12px;
+  min-height: 52px;
+  padding-block: 14px;
+}
+
+.hero-side-ctas .btn svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.hero-side-ctas .btn[href^="https://wa.me"] svg {
+  width: 28px;
+  height: 28px;
+  color: var(--white);
+}
 
 .monica-hero {
   padding: 64px 0 40px;
@@ -621,8 +661,8 @@ textarea { min-height: 118px; resize: vertical; }
 .section {
   max-width: 1180px;
   margin: 0 auto;
-  /* padding: 70px 24px; */
-  padding: 96px 0;
+  
+  padding: 90px 0;
 }
 
 .section p em {
