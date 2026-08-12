@@ -186,6 +186,7 @@ function setupHeroCarousel() {
   const slides = Array.from(document.querySelectorAll(".hero-slide"));
   const dotsWrap = document.querySelector("[data-hero-dots]");
   const inner = document.querySelector("[data-hero-inner]");
+  const heroSection = document.querySelector(".hero:not(.monica-hero)");
 
   if (slides.length < 2) return;
 
@@ -206,11 +207,12 @@ function setupHeroCarousel() {
     });
   }
 
-  // Titulo e botoes (hero-inner) aparecem somente na primeira imagem do
-  // carrossel (indice 0). Nas demais imagens, ficam ocultos.
+  // Titulo e botoes (hero-inner) e o gradiente escuro aparecem somente na
+  // primeira imagem do carrossel (indice 0). Nas demais imagens (que ja
+  // trazem texto proprio), ficam ocultos para a foto ficar nitida.
   function updateInnerVisibility() {
-    if (!inner) return;
-    inner.classList.toggle("is-hidden", current !== 0);
+    if (inner) inner.classList.toggle("is-hidden", current !== 0);
+    if (heroSection) heroSection.classList.toggle("hero--no-gradient", current !== 0);
   }
   updateInnerVisibility();
 

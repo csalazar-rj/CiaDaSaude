@@ -215,7 +215,8 @@ img {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background-image: linear-gradient(120deg, rgba(23, 49, 45, .82) 0%, rgba(23, 49, 45, .55) 45%, rgba(23, 49, 45, .28) 100%);
+  background-image: linear-gradient(120deg, rgba(63, 71, 70, 0.82) 0%, rgba(70, 81, 79, 0.55) 45%, rgba(69, 80, 78, 0.28) 100%);
+  /*   background-image: linear-gradient(120deg, rgba(23, 49, 45, .82) 0%, rgba(23, 49, 45, .55) 45%, rgba(23, 49, 45, .28) 100%);  */
   pointer-events: none;
 }
 
@@ -236,7 +237,23 @@ img {
 }
 
 .hero-slide.is-active {
-  opacity: 1;
+  opacity: 100;
+}
+
+.hero-slide--contain {
+  background-size: contain;
+  background-color: var(--petroleo, #17312d);
+}
+
+.hero-inner {
+  transition: opacity .5s ease, visibility .5s ease;
+  
+}
+
+.hero-inner.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .hero-dots {
