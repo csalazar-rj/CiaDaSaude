@@ -1,0 +1,6 @@
+# Compiled source #
+###################
+*.txt
+
+# ignored folders
+db

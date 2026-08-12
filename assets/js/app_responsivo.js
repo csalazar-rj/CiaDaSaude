@@ -99,7 +99,7 @@ function renderFooter() {
         </a>
       </div>
     </div>
-    <div class="footer-note">© 2026 CiaDaSaúde. Criado por: Carlos ESA</div>
+    <div class="footer-note">© 2026 Cia da Saúde Farmácia de Manipulação. Todos os direitos reservados.  Desenvolvido por Carlos ESA</div>
   `;
 }
 
@@ -180,6 +180,61 @@ function setupBudgetForms() {
     });
   });
 }
+
+/* Function Carrousel - Date: 08/12/26 Begin */
+function setupHeroCarousel() {
+  const slides = Array.from(document.querySelectorAll(".hero-slide"));
+  const dotsWrap = document.querySelector("[data-hero-dots]");
+  const inner = document.querySelector("[data-hero-inner]");
+
+  if (slides.length < 2) return;
+
+  let current = slides.findIndex((slide) => slide.classList.contains("is-active"));
+  if (current < 0) current = 0;
+
+  let dots = [];
+  if (dotsWrap) {
+    dotsWrap.innerHTML = "";
+    dots = slides.map((_, i) => {
+      const dot = document.createElement("button");
+      dot.type = "button";
+      dot.className = "hero-dot" + (i === current ? " is-active" : "");
+      dot.setAttribute("aria-label", `Ir para o slide ${i + 1}`);
+      dot.addEventListener("click", () => goTo(i));
+      dotsWrap.appendChild(dot);
+      return dot;
+    });
+  }
+
+  // Titulo e botoes (hero-inner) aparecem somente na primeira imagem do
+  // carrossel (indice 0). Nas demais imagens, ficam ocultos.
+  function updateInnerVisibility() {
+    if (!inner) return;
+    inner.classList.toggle("is-hidden", current !== 0);
+  }
+  updateInnerVisibility();
+
+  function goTo(index) {
+    slides[current].classList.remove("is-active");
+    dots[current]?.classList.remove("is-active");
+    current = index;
+    slides[current].classList.add("is-active");
+    dots[current]?.classList.add("is-active");
+    updateInnerVisibility();
+  }
+
+  // O carrossel troca automaticamente as fotos mesmo quando o sistema tem a
+  // preferencia "reduzir movimento" ativada, ja que aqui a troca de imagem e
+  // conteudo (nao apenas decoracao). O que muda nesse caso e a duracao da
+  // transicao de fade, controlada via CSS.
+  setInterval(() => {
+    goTo((current + 1) % slides.length);
+  }, 4000);
+  
+}
+
+
+/* Function Carrousel - End */
 
 function setupCapsuleGranules() {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -330,6 +385,7 @@ function setupBlog() {
 setupResponsiveMenus();
 renderFooter();
 setupBudgetForms();
+setupHeroCarousel();
 setupCapsuleGranules();
 setupAuth();
 setupBlog();

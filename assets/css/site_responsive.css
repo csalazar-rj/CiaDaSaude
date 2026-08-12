@@ -200,16 +200,95 @@ img {
   fill: currentColor;
 }
 
-.hero {
-  background-image: 
-  linear-gradient(120deg, rgba(23, 49, 45, .82) 0%, rgba(23, 49, 45, .55) 45%, rgba(23, 49, 45, .28) 100%),
-  url(/assets/img/recepcaoLoja.jpeg);
-  
+/* Adjustments for the Carrousel: Date: 08/12/26 - Begin */
+/* Escopo com :not(.monica-hero) para que a 2a secao (que reaproveita a
+   classe .hero) NAO receba o overlay/gradiente e o overflow do carrossel,
+   que devem valer apenas para a 1a secao (a que tem os slides). */
+.hero:not(.monica-hero) {
+  position: relative;
+  overflow: hidden;
+  color: var(--white);
+}
+
+.hero:not(.monica-hero)::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-image: linear-gradient(120deg, rgba(63, 71, 70, 0.82) 0%, rgba(70, 81, 79, 0.55) 45%, rgba(69, 80, 78, 0.28) 100%);
+  /*   background-image: linear-gradient(120deg, rgba(23, 49, 45, .82) 0%, rgba(23, 49, 45, .55) 45%, rgba(23, 49, 45, .28) 100%);  */
+  pointer-events: none;
+}
+
+.hero-slides {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: var(--white);
+  opacity: 0;
+  transition: opacity 1.4s ease;
 }
+
+.hero-slide.is-active {
+  opacity: 100;
+}
+
+.hero-slide--contain {
+  background-size: contain;
+  background-color: var(--petroleo, #17312d);
+}
+
+.hero-inner {
+  transition: opacity .5s ease, visibility .5s ease;
+  
+}
+
+.hero-inner.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.hero-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  z-index: 3;
+  display: flex;
+  gap: 10px;
+  transform: translateX(-50%);
+}
+
+.hero-dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 1.5px solid rgba(255, 255, 255, .75);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .25);
+  cursor: pointer;
+  transition: background .25s ease, transform .25s ease, border-color .25s ease;
+}
+
+.hero-dot:hover {
+  border-color: var(--white);
+}
+
+.hero-dot.is-active {
+  background: var(--laranja-claro, var(--brand));
+  border-color: var(--laranja-claro, var(--brand));
+  transform: scale(1.2);
+}
+
+/* Adjustments for the Carrousel: Date: 08/12/26 - End */
+
 
 .hero h1 {
   margin-bottom: 22px;
@@ -223,6 +302,11 @@ img {
 }
 
 .hero-inner {
+  /* adjustments for the carrousel */
+  position: relative;
+  z-index: 2;
+  /* adjustments for the carrousel */
+
   max-width: 1180px;
   margin: 0 auto;
   padding: 78px 24px 56px;

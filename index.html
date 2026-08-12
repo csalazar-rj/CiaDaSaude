@@ -1,9 +1,32 @@
+<!--
+==================================================
+Site Institucional - Cia da Saúde
+Desenvolvido por: Carlos Eduardo S Araujo
+Arquiteto e Engenheiro de Software
+
+Ano: 2026
+Todos os direitos reservados.
+==================================================
+-->
+
 <!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cia da Saúde | Farmácia de Manipulação</title>
+
+  <!-- Developer -->
+  <meta name="author" content="Carlos ESA">
+  <meta name="copyright" content="© 2026 Carlos Eduardo S Araujo">
+  <meta name="creator" content="Carlos Eduardo S Araujo">
+
+  <!-- Company -->
+  <meta name="publisher" content="Cia da Saúde Farmácia de Manipulação">
+
+  <!-- SEO -->
+  <meta name="description" content="Farmácia de manipulação especializada em fórmulas personalizadas.">
+
   <link rel="stylesheet" href="./assets/css/site_responsive.css">
 </head>
 <body>
@@ -19,16 +42,6 @@
 
           <a href="#formula">Fórmula</a>
           <a href="#produtos">Linhas</a>
-
-          <!-- Disable Menu Item (Sobre) 
-          <div class="submenu">
-            <button class="submenu-button">Linhas</button>
-            <div class="submenu-panel">
-              <a href="#">Emagrecimento</a>
-              
-            </div>
-          </div>
-        -->
 
           <a href="#servicos">Serviços</a>
           <a href="#sobre">Sobre</a>
@@ -49,7 +62,13 @@
 
   <main>
     <section class="hero">
-      <div class="hero-inner">
+      <div class="hero-slides" aria-hidden="true">
+        <div class="hero-slide is-active" style="background-image:url('./assets/img/recepcaoLoja.jpeg')"></div>
+        <div class="hero-slide hero-slide--contain" style="background-image:url('./assets/img/carrousel_2.jpeg')"></div>
+      </div>
+      <div class="hero-dots" data-hero-dots role="tablist" aria-label="Navegação do carrossel"></div>
+
+      <div class="hero-inner" data-hero-inner>
         <div>
           <span class="eyebrow">Farmácia de manipulação</span>          
           <h1>Cuidado personalizado para cada prescrição.</h1>
