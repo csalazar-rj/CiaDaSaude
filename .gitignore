@@ -3,7 +3,8 @@
 *.txt
 
 # ignored folders
-db
-produtos
-sobre
-clone
+db/
+produtos/
+sobre/
+clone/
+

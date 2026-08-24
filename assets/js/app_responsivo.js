@@ -23,6 +23,33 @@ const FOOTER = {
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 
+/* Menu Fixo - Begin */
+
+/* O header fixo no tpo está no CSS (position: fixed). Como ele sai
+do fluxo da página é preciso reservar este espaço no topo da página.
+Isto evita que ele fique escondido atrás do Menu. */
+
+function setupHeaderSpacer() {
+  const header = document.querySelector("header");
+
+    if (!header) return;
+
+    function updateHeaderHeight() {
+      document.documentElement.style.setProperty("--header-h", `${header.offsetHeight}px`);
+    }
+
+    updateHeaderHeight();
+    window.addEventListener("load", updateHeaderHeight);
+    window.addEventListener("resize", updateHeaderHeight);
+
+    /* Recalculo para Mobile */
+    const observer = new MutationObserver(updateHeaderHeight);
+    observer.observe(header, { attributes: true, subtree: true, attributeFilter: ["class"] });
+
+}
+/* Menu Fixo - End */
+
+
 function setupResponsiveMenus() {
   document.querySelectorAll(".nav").forEach((nav, index) => {
     const menu = nav.querySelector(".menu");
@@ -383,7 +410,7 @@ function setupBlog() {
   }
 }
 
-
+setupHeaderSpacer();
 setupResponsiveMenus();
 renderFooter();
 setupBudgetForms();
