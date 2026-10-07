@@ -1,6 +1,7 @@
 # Compiled source #
 ###################
 *.txt
+*.pdf
 
 # ignored folders
 db/

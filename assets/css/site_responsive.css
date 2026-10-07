@@ -1701,7 +1701,10 @@ AI source - End
     gap: 22px;
   }
 
-  .form-grid, .product-grid, .card-grid, .cards-grid { grid-template-columns: 1fr; }
+  .form-grid, .product-grid, .card-grid, .cards-grid, .contato-grid { grid-template-columns: 1fr; }
+
+  .contato-card { padding: 24px 20px; }
+  .map-frame, .map-frame iframe { min-height: 300px; }
   
   .section, .content, .login-shell {
     padding-inline: 18px;
@@ -1752,4 +1755,55 @@ AI source - End
     padding-inline: 14px;
     font-size: 13px;
   }
+}
+
+/* ==========================================================
+   Carrossel (hero) - banners 1600x667 exibidos por inteiro
+   Date: 07/10/26
+   - A secao assume a proporcao exata das imagens (1600/667), entao a
+     altura acompanha a largura e nada e cortado nem estoura a pagina.
+   - A largura tambem e limitada pela altura da janela
+     (100vh - header), para o banner nunca ficar maior que a tela.
+   - Os slides usam contain (nunca cover) e nao ha overlay sobre o banner.
+   ========================================================== */
+.hero:not(.monica-hero) {
+  width: min(100%, calc((100vh - var(--header-h)) * 1600 / 667));
+  max-width: 100%;
+  aspect-ratio: 1600 / 667;
+  margin: 0 auto;
+  padding: 0;               /* anula o "section { padding: 96px 0 }" */
+  overflow: hidden;
+  background: transparent;
+}
+
+.hero:not(.monica-hero)::before {
+  display: none;            /* sem gradiente sobre os banners */
+}
+
+.hero:not(.monica-hero) .hero-slide,
+.hero:not(.monica-hero) .hero-slide--contain {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+/* Os banners ja trazem titulo e CTA proprios */
+.hero:not(.monica-hero) .hero-inner {
+  display: none;
+}
+
+.hero:not(.monica-hero) .hero-dots {
+  bottom: 8px;
+  gap: 8px;
+}
+
+.hero:not(.monica-hero) .hero-dot {
+  width: 8px;
+  height: 8px;
+  background: rgba(0, 0, 0, .35);
+}
+
+.hero:not(.monica-hero) .hero-dot.is-active {
+  background: var(--laranja-claro, var(--brand));
 }
